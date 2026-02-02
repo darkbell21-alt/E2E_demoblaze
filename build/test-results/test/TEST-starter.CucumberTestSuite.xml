@@ -1,231 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="starter.CucumberTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-09-23T22:34:29" hostname="IPS236" time="37.081">
+<testsuite name="starter.CucumberTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-02-02T09:12:01" hostname="DESKTOP-TG4KUDT" time="38.088">
   <properties/>
-  <testcase name="Example #1.1" classname="starter.CucumberTestSuite" time="37.081"/>
+  <testcase name="Example #1.1" classname="starter.CucumberTestSuite" time="38.088"/>
   <system-out><![CDATA[
-Scenario Outline: Complete purchase for standard_user with checkout index 0 ?[90m# features/purchase/purchase_flow.feature:13?[0m
-  ?[32mGiven ?[0m?[32mI login as user ?[0m?[32m?[1m"standard_user"?[0m                                     ?[90m# starter.stepdefinitions.StoreStepDefinitions.i_login_as_user(java.lang.String)?[0m
-  ?[32mWhen ?[0m?[32mI add the listed products for user ?[0m?[32m?[1m"standard_user"?[0m                   ?[90m# starter.stepdefinitions.StoreStepDefinitions.i_add_products_for_user(java.lang.String)?[0m
-  ?[32mAnd ?[0m?[32mI view my cart?[0m                                                        ?[90m# starter.stepdefinitions.StoreStepDefinitions.i_view_my_cart()?[0m
-  ?[32mAnd ?[0m?[32mI proceed to checkout?[0m                                                 ?[90m# starter.stepdefinitions.StoreStepDefinitions.i_proceed_to_checkout()?[0m
-  ?[32mAnd ?[0m?[32mI enter checkout data for user ?[0m?[32m?[1m"standard_user"?[0m?[32m and index ?[0m?[32m?[1m0?[0m            ?[90m# starter.stepdefinitions.StoreStepDefinitions.i_enter_checkout_data(java.lang.String,int)?[0m
-  ?[32mThen ?[0m?[32mI should see the confirmation for user ?[0m?[32m?[1m"standard_user"?[0m               ?[90m# starter.stepdefinitions.StoreStepDefinitions.i_should_see_confirmation(java.lang.String)?[0m
+@demoblaze
+Scenario Outline: Complete purchase for demo_user with checkout index 0 ?[90m# features/purchase/demoblaze_purchase.feature:13?[0m
+  ?[32mGiven ?[0m?[32mI open demoblaze home?[0m                                           ?[90m# starter.demoblaze.stepdefinitions.DemoblazeStepDefinitions.i_open_demoblaze()?[0m
+  ?[32mWhen ?[0m?[32mI add the listed products for demoblaze user ?[0m?[32m?[1m"demo_user"?[0m         ?[90m# starter.demoblaze.stepdefinitions.DemoblazeStepDefinitions.i_add_products_for_user(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI view my demoblaze cart?[0m                                          ?[90m# starter.demoblaze.stepdefinitions.DemoblazeStepDefinitions.i_view_my_cart()?[0m
+  ?[32mAnd ?[0m?[32mI place order for demoblaze user ?[0m?[32m?[1m"demo_user"?[0m?[32m and index ?[0m?[32m?[1m0?[0m          ?[90m# starter.demoblaze.stepdefinitions.DemoblazeStepDefinitions.i_place_order_for_user(java.lang.String,int)?[0m
+  ?[32mThen ?[0m?[32mI should see the demoblaze confirmation for user ?[0m?[32m?[1m"demo_user"?[0m     ?[90m# starter.demoblaze.stepdefinitions.DemoblazeStepDefinitions.i_should_see_confirmation(java.lang.String)?[0m
 ]]></system-out>
   <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
 SLF4J(W): Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
-SLF4J(W): Ignoring binding found at [jar:file:/C:/Users/yesenia.vargas/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.2.10/f69d97ef3335c6ab82fc21dfb77ac613f90c1221/logback-classic-1.2.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J(W): Ignoring binding found at [jar:file:/C:/Users/LENOVO.USER/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.2.11/4741689214e9d1e8408b206506cbe76d1c6a7d60/logback-classic-1.2.11.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J(W): See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
-sept 23, 2025 5:34:29 P. M. io.cucumber.java.MethodScanner safelyGetMethods
-WARNING: Failed to load methods of class 'net.bytebuddy.agent.VirtualMachine$ForOpenJ9$Dispatcher$ForJnaWindowsEnvironment'.
-By default Cucumber scans the entire classpath for step definitions.
-You can restrict this by configuring the glue path.
-
-Examples:
- - @CucumberOptions(glue = "com.example.application")
- - @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.example.application") - src/test/resources/junit-platform.properties   cucumber.glue=com.example.application
- - src/test/resources/cucumber.properties         cucumber.glue=com.example.application
-
-java.lang.NoClassDefFoundError: com/sun/jna/platform/win32/Win32Exception
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3578)
-	at java.base/java.lang.Class.privateGetPublicMethods(Class.java:3603)
-	at java.base/java.lang.Class.getMethods(Class.java:2185)
-	at io.cucumber.java.MethodScanner.safelyGetMethods(MethodScanner.java:39)
-	at io.cucumber.java.MethodScanner.scan(MethodScanner.java:32)
-	at io.cucumber.java.JavaBackend.lambda$loadGlue$2(JavaBackend.java:41)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.DistinctOps$1$2.accept(DistinctOps.java:174)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at io.cucumber.java.JavaBackend.loadGlue(JavaBackend.java:41)
-	at io.cucumber.core.runner.Runner.<init>(Runner.java:56)
-	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier.createRunner(ThreadLocalRunnerSupplier.java:47)
-	at java.base/java.lang.ThreadLocal$SuppliedThreadLocal.initialValue(ThreadLocal.java:357)
-	at java.base/java.lang.ThreadLocal.setInitialValue(ThreadLocal.java:225)
-	at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:194)
-	at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier.get(ThreadLocalRunnerSupplier.java:40)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:35)
-	at io.cucumber.core.runtime.CucumberExecutionContext.getRunner(CucumberExecutionContext.java:140)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runBeforeAllHooks(CucumberExecutionContext.java:92)
-	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runBeforeAllHooks(CucumberEngineExecutionContext.java:103)
-	at io.cucumber.junit.platform.engine.CucumberEngineDescriptor.ifChildren(CucumberEngineDescriptor.java:63)
-	at io.cucumber.junit.platform.engine.CucumberEngineDescriptor.before(CucumberEngineDescriptor.java:38)
-	at io.cucumber.junit.platform.engine.CucumberEngineDescriptor.before(CucumberEngineDescriptor.java:12)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:153)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.exec(ForkJoinPoolHierarchicalTestExecutorService.java:274)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1310)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1841)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1806)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
-Caused by: java.lang.ClassNotFoundException: com.sun.jna.platform.win32.Win32Exception
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
-	... 51 more
-
-sept 23, 2025 5:34:29 P. M. io.cucumber.java.MethodScanner safelyGetMethods
-WARNING: Failed to load methods of class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaWindowsNamedPipe'.
-By default Cucumber scans the entire classpath for step definitions.
-You can restrict this by configuring the glue path.
-
-Examples:
- - @CucumberOptions(glue = "com.example.application")
- - @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.example.application") - src/test/resources/junit-platform.properties   cucumber.glue=com.example.application
- - src/test/resources/cucumber.properties         cucumber.glue=com.example.application
-
-java.lang.NoClassDefFoundError: com/sun/jna/platform/win32/Win32Exception
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3578)
-	at java.base/java.lang.Class.privateGetPublicMethods(Class.java:3603)
-	at java.base/java.lang.Class.getMethods(Class.java:2185)
-	at io.cucumber.java.MethodScanner.safelyGetMethods(MethodScanner.java:39)
-	at io.cucumber.java.MethodScanner.scan(MethodScanner.java:32)
-	at io.cucumber.java.JavaBackend.lambda$loadGlue$2(JavaBackend.java:41)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.DistinctOps$1$2.accept(DistinctOps.java:174)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at io.cucumber.java.JavaBackend.loadGlue(JavaBackend.java:41)
-	at io.cucumber.core.runner.Runner.<init>(Runner.java:56)
-	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier.createRunner(ThreadLocalRunnerSupplier.java:47)
-	at java.base/java.lang.ThreadLocal$SuppliedThreadLocal.initialValue(ThreadLocal.java:357)
-	at java.base/java.lang.ThreadLocal.setInitialValue(ThreadLocal.java:225)
-	at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:194)
-	at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier.get(ThreadLocalRunnerSupplier.java:40)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:35)
-	at io.cucumber.core.runtime.CucumberExecutionContext.getRunner(CucumberExecutionContext.java:140)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runBeforeAllHooks(CucumberExecutionContext.java:92)
-	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runBeforeAllHooks(CucumberEngineExecutionContext.java:103)
-	at io.cucumber.junit.platform.engine.CucumberEngineDescriptor.ifChildren(CucumberEngineDescriptor.java:63)
-	at io.cucumber.junit.platform.engine.CucumberEngineDescriptor.before(CucumberEngineDescriptor.java:38)
-	at io.cucumber.junit.platform.engine.CucumberEngineDescriptor.before(CucumberEngineDescriptor.java:12)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:153)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.exec(ForkJoinPoolHierarchicalTestExecutorService.java:274)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1310)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1841)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1806)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
-Caused by: java.lang.ClassNotFoundException: com.sun.jna.platform.win32.Win32Exception
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
-	... 51 more
-
-sept 23, 2025 5:34:29 P. M. io.cucumber.java.MethodScanner safelyGetMethods
-WARNING: Failed to load methods of class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaWindowsNamedPipe$Factory'.
-By default Cucumber scans the entire classpath for step definitions.
-You can restrict this by configuring the glue path.
-
-Examples:
- - @CucumberOptions(glue = "com.example.application")
- - @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.example.application") - src/test/resources/junit-platform.properties   cucumber.glue=com.example.application
- - src/test/resources/cucumber.properties         cucumber.glue=com.example.application
-
-java.lang.NoClassDefFoundError: com/sun/jna/platform/win32/Win32Exception
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3578)
-	at java.base/java.lang.Class.privateGetPublicMethods(Class.java:3603)
-	at java.base/java.lang.Class.getMethods(Class.java:2185)
-	at io.cucumber.java.MethodScanner.safelyGetMethods(MethodScanner.java:39)
-	at io.cucumber.java.MethodScanner.scan(MethodScanner.java:32)
-	at io.cucumber.java.JavaBackend.lambda$loadGlue$2(JavaBackend.java:41)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.DistinctOps$1$2.accept(DistinctOps.java:174)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at io.cucumber.java.JavaBackend.loadGlue(JavaBackend.java:41)
-	at io.cucumber.core.runner.Runner.<init>(Runner.java:56)
-	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier.createRunner(ThreadLocalRunnerSupplier.java:47)
-	at java.base/java.lang.ThreadLocal$SuppliedThreadLocal.initialValue(ThreadLocal.java:357)
-	at java.base/java.lang.ThreadLocal.setInitialValue(ThreadLocal.java:225)
-	at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:194)
-	at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier.get(ThreadLocalRunnerSupplier.java:40)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:35)
-	at io.cucumber.core.runtime.CucumberExecutionContext.getRunner(CucumberExecutionContext.java:140)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runBeforeAllHooks(CucumberExecutionContext.java:92)
-	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runBeforeAllHooks(CucumberEngineExecutionContext.java:103)
-	at io.cucumber.junit.platform.engine.CucumberEngineDescriptor.ifChildren(CucumberEngineDescriptor.java:63)
-	at io.cucumber.junit.platform.engine.CucumberEngineDescriptor.before(CucumberEngineDescriptor.java:38)
-	at io.cucumber.junit.platform.engine.CucumberEngineDescriptor.before(CucumberEngineDescriptor.java:12)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:153)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.exec(ForkJoinPoolHierarchicalTestExecutorService.java:274)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1310)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1841)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1806)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
-Caused by: java.lang.ClassNotFoundException: com.sun.jna.platform.win32.Win32Exception
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
-	... 51 more
-
-sept 23, 2025 5:34:46 P. M. org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
-WARNING: Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
-sept 23, 2025 5:34:53 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 140
-sept 23, 2025 5:34:53 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 140.0.7339.186. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.27.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+feb 02, 2026 4:12:05 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 144
+feb 02, 2026 4:12:05 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.27.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>

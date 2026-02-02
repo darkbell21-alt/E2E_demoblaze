@@ -1,6 +1,6 @@
-🧪 Automatización E2E con Serenity BDD, Cucumber y Saucedemo
+🧪 Automatización E2E con Serenity BDD, Cucumber y Demoblaze
 
-Este proyecto implementa un flujo de pruebas automatizadas end-to-end sobre el sitio Saucedemo
+Este proyecto implementa un flujo de pruebas automatizadas end-to-end sobre el sitio Demoblaze
 , utilizando Serenity BDD, Cucumber y el patrón Screenplay.
 Incluye la gestión de datos externos, evidencias automáticas en cada paso y configuraciones para ejecución en Chrome o Firefox.
 
@@ -60,8 +60,12 @@ Carga de datos de usuario desde purchase-data.json.
 
 Confirmación de la compra y validación del mensaje final.
 
+Además, se agregó una suite E2E para https://www.demoblaze.com/ (etiquetada con `@demoblaze`).
+La feature se encuentra en `src/test/resources/features/purchase/demoblaze_purchase.feature` y los datos en `src/test/resources/test-data/purchase-data-demoblaze.json`.
+Para ejecutar sólo las pruebas de Demoblaze use: `./gradlew clean test -Dtags=@demoblaze`.
+
 📁 Estructura de carpetas
-E2ESauceDemo
+E2EDemoblaze
 ├── build.gradle
 ├── pom.xml
 ├── serenity.conf
@@ -82,35 +86,30 @@ E2ESauceDemo
 
 📄 Datos externos (JSON)
 
-El archivo purchase-data.json permite parametrizar datos de usuario, productos y mensajes esperados.
+El archivo purchase-data-demoblaze.json permite parametrizar datos de usuario, productos y mensajes esperados para Demoblaze.
 
 Ubicación:
 
-src/test/resources/test-data/purchase-data.json
+src/test/resources/test-data/purchase-data-demoblaze.json
 
 
 Ejemplo:
 
 {
-"standard_user": {
-"username": "standard_user",
-"password": "secret_sauce",
-"products": [
-"Sauce Labs Backpack",
-"Sauce Labs Bike Light",
-"Sauce Labs Bolt T-Shirt",
-"Sauce Labs Fleece Jacket",
-"Sauce Labs Onesie"
-],
-"confirmationMessage": "Thank you for your order!",
-"checkoutData": [
-{
-"firstName": "Yess",
-"lastName": "Vargas",
-"zipCode": "17035"
-}
-]
-}
+  "demo_user": {
+    "products": ["Sony vaio i5", "Samsung galaxy s7"],
+    "checkoutData": [
+      {
+        "name": "Yess Vargas",
+        "country": "Ecuador",
+        "city": "Quito",
+        "card": "4111111111111111",
+        "month": "02",
+        "year": "2026"
+      }
+    ],
+    "confirmationMessage": "Thank you for your purchase!"
+  }
 }
 
 📸 Reportes

@@ -1,0 +1,19 @@
+{
+  "demo_user": {
+    "products": [
+      "Sony vaio i5",
+      "Samsung galaxy s7"
+    ],
+    "checkoutData": [
+      {
+        "name": "Yess Vargas",
+        "country": "Ecuador",
+        "city": "Quito",
+        "card": "4111111111111111",
+        "month": "02",
+        "year": "2026"
+      }
+    ],
+    "confirmationMessage": "Thank you for your purchase!"
+  }
+}

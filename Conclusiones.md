@@ -1,6 +1,6 @@
 Aspectos clave
 
-La automatización del flujo de compra en Saucedemo fue exitosa.
+La automatización del flujo de compra en Demoblaze fue exitosa.
 Los reportes detallados y visuales facilitaron la identificación de fallos.
 El patrón Screenplay mejoró la legibilidad y mantenibilidad del código.
 

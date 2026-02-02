@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">"E2EDemoblaze"</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="3e27a95a435220492cd9ee7292bb126b29644049b43ce6fb88b139b525d5045b.html">Demoblaze Purchase</a></span>
+                > <span class="truncate-60"><a
+                    href="64612316fbaf02d27c5acfb5e5cf6068553026874cb0f74ba82cc6757393d98e.html">Complete purchase for <userKey> with checkout index <index> </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-02-2026 04:12</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Demoblaze Purchase Flow </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="2a5b6a7be0f08df02d8ab0b4d4c68648c2695c6c7ef0658c71de4d42b1415b18.html">Under 1 Second
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="0b9a55ecf7196c32ce3d9f24d969ffba372c0fcb4bd22977302e4420d68117f5.html">Demoblaze
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Complete purchase for with checkout index
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given I open demoblaze home<br>When I add the listed products for demoblaze user "&lt;userKey&gt;"<br>And I view my demoblaze cart<br>And I place order for demoblaze user "&lt;userKey&gt;" and index &lt;index&gt;<br>Then I should see the demoblaze confirmation for user "&lt;userKey&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: an element that is visible but: no matching element found by [home link located with: //a[text()='Home']]</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>starter.demoblaze.tasks.GoHomeInteraction.performAs(GoHomeInteraction.java:23)<br />starter.demoblaze.tasks.AddProductToCart.lambda$product$0(AddProductToCart.java:18)<br />starter.demoblaze.stepdefinitions.DemoblazeStepDefinitions.i_add_products_for_user(DemoblazeStepDefinitions.java:53)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource13380428668117144905.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="78ba74f8424f8cc241ebca6f49f22dc82c6793381c11b4bcb0a05a3cacac5177.png" title=" 1: Complete purchase for demo_user with checkout index 0 ({userKey=demo_user, index=0})" width="0"/>
+                <img src="78ba74f8424f8cc241ebca6f49f22dc82c6793381c11b4bcb0a05a3cacac5177.png" title=" Given I open demoblaze home" width="0"/>
+                <img src="78ba74f8424f8cc241ebca6f49f22dc82c6793381c11b4bcb0a05a3cacac5177.png" title=" Demo user clear browser data" width="0"/>
+                <img src="433c740f9449e2e138176554bd072aa4047b56c0e6dae91375c979de2545011e.png" title=" demo user opens the browser at https://www.demoblaze.com/" width="0"/>
+                <img src="433c740f9449e2e138176554bd072aa4047b56c0e6dae91375c979de2545011e.png" title=" Given I open demoblaze home (completed)" width="0"/>
+                <img src="31bba2c5d80ef2c7532f32df627be46a631213327837d7388a5e1dc09d27a137.png" title=" When I add the listed products for demoblaze user &quot;demo_user&quot;" width="0"/>
+                <img src="31bba2c5d80ef2c7532f32df627be46a631213327837d7388a5e1dc09d27a137.png" title=" demo user adds product to cart" width="0"/>
+                <img src="31bba2c5d80ef2c7532f32df627be46a631213327837d7388a5e1dc09d27a137.png" title=" demo user clicks on product link for Sony vaio i5" width="0"/>
+                <img src="c6cf0a36ed1e2e46ea03cc74be581e085cf02857a62c26612c559e8e7219853b.png" title=" demo user clicks on add to cart button" width="0"/>
+                <img src="158bd5aac2c0647d862d4eed96baffbeb2cba99e7049ed68d57bf02d6d3282a8.png" title=" Demo user accept alert interaction" width="0"/>
+                <img src="158bd5aac2c0647d862d4eed96baffbeb2cba99e7049ed68d57bf02d6d3282a8.png" title=" Demo user go home interaction" width="0"/>
+                <img src="3a6ca6dcbdc7017e39f40ca1b46951911b9c4cde8bd311ba3c1d0b894a0ba3d0.png" title=" demo user adds product to cart (completed)" width="0"/>
+                <img src="3a6ca6dcbdc7017e39f40ca1b46951911b9c4cde8bd311ba3c1d0b894a0ba3d0.png" title=" When I add the listed products for demoblaze user &quot;demo_user&quot; (completed)" width="0"/>
+                <img src="31bba2c5d80ef2c7532f32df627be46a631213327837d7388a5e1dc09d27a137.png" title=" demo user adds product to cart" width="0"/>
+                <img src="31bba2c5d80ef2c7532f32df627be46a631213327837d7388a5e1dc09d27a137.png" title=" demo user clicks on product link for Samsung galaxy s7" width="0"/>
+                <img src="e5b286c6cfbd78ad60c6774ec546f3d8a1fce40847de7447f95be58eda4d5ca0.png" title=" demo user clicks on add to cart button" width="0"/>
+                <img src="dcbfb9afa95d5622ee333a6e70741df1983cbdfb9f3fc594fe18d1a57992a4bd.png" title=" Demo user accept alert interaction" width="0"/>
+                <img src="bef405e6beafcf162eb0957efb3daa9a634ba87bb27f05d852288a180097ebee.png" title=" demo user adds product to cart (completed)" width="0"/>
+                <img src="bef405e6beafcf162eb0957efb3daa9a634ba87bb27f05d852288a180097ebee.png" title=" 1: Complete purchase for demo_user with checkout index 0 ({userKey=demo_user, index=0}) (completed)" width="0"/>
+                <img src="bef405e6beafcf162eb0957efb3daa9a634ba87bb27f05d852288a180097ebee.png" title=" And I view my demoblaze cart" width="0"/>
+                <img src="6ba4f290895166c11fcf4e148f377ae2fa6bd23bfa6273ec063f2994c9d0709e.png" title=" And I place order for demoblaze user &quot;demo_user&quot; and index 0" width="0"/>
+                <img src="6ba4f290895166c11fcf4e148f377ae2fa6bd23bfa6273ec063f2994c9d0709e.png" title=" demo user places an order" width="0"/>
+                <img src="6ba4f290895166c11fcf4e148f377ae2fa6bd23bfa6273ec063f2994c9d0709e.png" title=" demo user clicks on cart link" width="0"/>
+                <img src="da09749f9debaea21c20f0378b58282cbbaa5622a81c9da26d7f8026f41d1481.png" title=" demo user clicks on place order button" width="0"/>
+                <img src="d345651aa9e8271e19a2bf1a20f950753dfd40a1c4f92cbb2b4dfc89e457ae21.png" title=" demo user enters 'Yess Vargas' into name field" width="0"/>
+                <img src="304927366c4ce834ad436850e6bed461ec5c41d84741a2dd5659f68a2059b137.png" title=" demo user enters 'Ecuador' into country field" width="0"/>
+                <img src="0b7f97ce03a86802a88c00127a975e1fbdda2381af1f3c49daca5c004571b5b8.png" title=" demo user enters 'Quito' into city field" width="0"/>
+                <img src="3fc6c7009a96339b020e1e5aa3c9f6e0f6af0ee0e17c1cedbce135e594156904.png" title=" demo user enters '4111111111111111' into card field" width="0"/>
+                <img src="a45f356b5c0920772044fe02018f44ef53270f5161db4042a5d24078f4f31039.png" title=" demo user enters '02' into month field" width="0"/>
+                <img src="3d3aa6fc63a49e855696f429e0898eaccce831c821a43f204bb9946cbdac33ed.png" title=" demo user enters '2026' into year field" width="0"/>
+                <img src="6f23fbf3ff96f95ce739fc3fedf8d5afda2964eb6d56450e69b3648e36f4dbb6.png" title=" Then I should see the demoblaze confirmation for user &quot;demo_user&quot;" width="0"/>
+                <img src="6f23fbf3ff96f95ce739fc3fedf8d5afda2964eb6d56450e69b3648e36f4dbb6.png" title=" demo user should see  that contains: &lt;[Thank you for your purchase!]&gt;" width="0"/>
+
+                <img src="6f23fbf3ff96f95ce739fc3fedf8d5afda2964eb6d56450e69b3648e36f4dbb6.png" title=" Then I should see the demoblaze confirmation for user "demo_user" (completed): <span class='failing-color'>FAILURE</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.2.13</span>
+</div>
+</body>
+</html>
